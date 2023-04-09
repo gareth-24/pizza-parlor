@@ -30,27 +30,31 @@ Pizza.prototype.checkPrice = function() {
 }
 
 // UI Logic
+function displayGreeting(name)  {
+  const nameOutput = document.getElementById("name-output");
+  nameOutput.innerText = name;
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.removeAttribute("class");
+}
 
 function displayPizzaDetails(pizza)  {
-  let resultsDiv = document.getElementById("price-output");
-  resultsDiv.innerText = null;
-  const p = document.createElement("p");
-  p.append(pizza.currentPrice);
-  resultsDiv.append(p);
+  let priceOutput = document.getElementById("price-output");
+  priceOutput.innerText = null;
+  const paragraph = document.createElement("p");
+  paragraph.append(pizza.currentPrice);
+  priceOutput.append(paragraph);
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const inputtedFirstName = document.querySelector("input#first-name").value;
+  const inputtedName = document.querySelector("input#first-name").value;
   const inputtedPizzaSize = document.getElementById("pizza-size-input").value;
   const inputtedToppings = document.querySelectorAll("[name=topping-option]:checked");
   const selectedToppingsDiv = document.getElementById("toppings-results");
   selectedToppingsDiv.innerText = null;
-  console.log(inputtedFirstName);
-  console.log(inputtedPizzaSize);
   
   const inputtedToppingsArr = Array.from(inputtedToppings);
-  const newToppingsArray =[];
+  let newToppingsArray =[];
   inputtedToppingsArr.forEach(function(element) {
     const listElement = document.createElement("li");
     listElement.append(element.value);
@@ -62,6 +66,7 @@ function handleFormSubmission(event) {
   console.log(newPizza);
   price = newPizza.checkPrice();
   displayPizzaDetails(newPizza);
+  displayGreeting(inputtedName);
 }
 
 function handleResetButton(event)  {
