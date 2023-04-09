@@ -3,6 +3,7 @@
 function Pizza(topping, size)  {
   this.toppings = topping;
   this.size = size;
+  this.currentPrice = 0;
 }
 
 Pizza.prototype.addTopping = function(newTopping) {
@@ -10,12 +11,21 @@ Pizza.prototype.addTopping = function(newTopping) {
 }
 
 Pizza.prototype.checkPrice = function() {
+  let numberOfToppings = this.toppings.length;
+  console.log(numberOfToppings);
+  this.currentPrice += (numberOfToppings*1.25);
+  console.log(this.currentPrice);
   if (this.size === "small")  {
-    return 5.00;
+    this.currentPrice += 5.00;
+    return this.currentPrice;
   } else if (this.size === "medium")  {
-    return 9.00;
+    this.currentPrice += 9.00;
+    return this.currentPrice;
+  } else if (this.size === "large") {
+    this.currentPrice += 13.00;
+    return this.currentPrice;
   } else  {
-    return 13.00;
+    console.log("no pizza size has been selected");
   }
 }
 
