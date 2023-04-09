@@ -32,7 +32,7 @@ Pizza.prototype.checkPrice = function() {
 // UI Logic
 
 function displayPizzaDetails(pizza)  {
-  let resultsDiv = document.querySelector("div#pizza-results");
+  let resultsDiv = document.getElementById("price-output");
   resultsDiv.innerText = null;
   const p = document.createElement("p");
   p.append(pizza.currentPrice);
@@ -44,23 +44,24 @@ function handleFormSubmission(event) {
   const inputtedFirstName = document.querySelector("input#first-name").value;
   const inputtedPizzaSize = document.getElementById("pizza-size-input").value;
   const inputtedToppings = document.querySelectorAll("[name=topping-option]:checked");
+  const selectedToppingsDiv = document.getElementById("toppings-results");
+  selectedToppingsDiv.innerText = null;
   console.log(inputtedFirstName);
   console.log(inputtedPizzaSize);
   
   const inputtedToppingsArr = Array.from(inputtedToppings);
   const newToppingsArray =[];
   inputtedToppingsArr.forEach(function(element) {
-    const paragraph = document.createElement("p");
-    paragraph.append(element.value);
+    const listElement = document.createElement("li");
+    listElement.append(element.value);
     newToppingsArray.push(element.value);
-    document.body.append(paragraph);
+    selectedToppingsDiv.append(listElement);
   });
   console.log(newToppingsArray);
   let newPizza = new Pizza(newToppingsArray, inputtedPizzaSize);
   console.log(newPizza);
   price = newPizza.checkPrice();
   displayPizzaDetails(newPizza);
-
 }
 
 function handleResetButton(event)  {
