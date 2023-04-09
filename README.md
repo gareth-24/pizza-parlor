@@ -25,6 +25,16 @@ smallPizza.checkPrice();
 mediumPizza.checkPrice();
 Expected Output:
 5.00;
-10.00;
+9.00;
+
+Test: "It will determine the price of the pizza based on size and number of toppings."
+Code:
+const smallPizza = new Pizza (["pepperoni"], "small");
+const mediumPizza = new Pizza (["pepperoni", "olives"], "medium");
+smallPizza.checkPrice();
+mediumPizza.checkPrice();
+Expected Output:
+6.25;
+11.50;
 
 ```
