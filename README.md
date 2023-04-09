@@ -15,4 +15,16 @@ myPizza.addTopping("onions");
 myPizza;
 Expected Output: Pizza { toppings: ["pepperoni", "olives", "onions"], size: "medium" }
 
+Describe: Pizza.prototype.checkPrice()
+
+Test: "It will initially determine the price of the pizza based on size."
+Code:
+const smallPizza = new Pizza (["pepperoni"], "small");
+const mediumPizza = new Pizza (["pepperoni"], "medium");
+smallPizza.checkPrice();
+mediumPizza.checkPrice();
+Expected Output:
+5.00;
+10.00;
+
 ```
