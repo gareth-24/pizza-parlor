@@ -31,16 +31,24 @@ Pizza.prototype.checkPrice = function() {
 
 // UI Logic
 
+// function displayPizzaDetails(pizza)  {
+//   let resultsDiv = document.querySelector("div#pizza-results");
+//   resultsDiv.innerText = null;
+//   // const ul = document.createElement("ul");
+//   price = pizza.checkPrice();
+//   document.getElementById("pizza-price").innerText = newPizza.currentPrice;
+
+// }
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const inputtedFirstName = document.querySelector("input#first-name").value;
   const inputtedPizzaSize = document.getElementById("pizza-size-input").value;
   const inputtedToppings = document.querySelectorAll("[name=topping-option]:checked");
-  const inputtedToppingsArr = Array.from(inputtedToppings);
-
   console.log(inputtedFirstName);
   console.log(inputtedPizzaSize);
-
+  
+  const inputtedToppingsArr = Array.from(inputtedToppings);
   const newToppingsArray =[];
   inputtedToppingsArr.forEach(function(element) {
     const paragraph = document.createElement("p");
@@ -51,6 +59,14 @@ function handleFormSubmission(event) {
   console.log(newToppingsArray);
   let newPizza = new Pizza([newToppingsArray], inputtedPizzaSize);
   console.log(newPizza);
+  price = newPizza.checkPrice();
+  // displayPizzaDetails(newPizza);
+  let resultsDiv = document.querySelector("div#pizza-results");
+    resultsDiv.innerText = null;
+  const p = document.createElement("p");
+  p.append(newPizza.currentPrice);
+  resultsDiv.append(p);
+
 }
 
 function handleResetButton(event)  {
