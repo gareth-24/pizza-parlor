@@ -42,4 +42,17 @@ Expected Output:
 6.25;
 11.50;
 
+Test: "If no toppings are selected, it should correctly price the pizza as $5 for a small, $9 for a medium, or $13 for a large."
+Code:
+const smallPizza = new Pizza ([], "small");
+const mediumPizza = new Pizza ([], "medium");
+const largePizza = new Pizza ([], "large");
+smallPizza.checkPrice();
+mediumPizza.checkPrice();
+largePizza.checkPrice();
+Expected Output:
+5;
+9;
+13;
+
 ```
