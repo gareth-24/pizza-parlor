@@ -31,14 +31,13 @@ Pizza.prototype.checkPrice = function() {
 
 // UI Logic
 
-// function displayPizzaDetails(pizza)  {
-//   let resultsDiv = document.querySelector("div#pizza-results");
-//   resultsDiv.innerText = null;
-//   // const ul = document.createElement("ul");
-//   price = pizza.checkPrice();
-//   document.getElementById("pizza-price").innerText = newPizza.currentPrice;
-
-// }
+function displayPizzaDetails(pizza)  {
+  let resultsDiv = document.querySelector("div#pizza-results");
+  resultsDiv.innerText = null;
+  const p = document.createElement("p");
+  p.append(pizza.currentPrice);
+  resultsDiv.append(p);
+}
 
 function handleFormSubmission(event) {
   event.preventDefault();
@@ -57,15 +56,10 @@ function handleFormSubmission(event) {
     document.body.append(paragraph);
   });
   console.log(newToppingsArray);
-  let newPizza = new Pizza([newToppingsArray], inputtedPizzaSize);
+  let newPizza = new Pizza(newToppingsArray, inputtedPizzaSize);
   console.log(newPizza);
   price = newPizza.checkPrice();
-  // displayPizzaDetails(newPizza);
-  let resultsDiv = document.querySelector("div#pizza-results");
-    resultsDiv.innerText = null;
-  const p = document.createElement("p");
-  p.append(newPizza.currentPrice);
-  resultsDiv.append(p);
+  displayPizzaDetails(newPizza);
 
 }
 
