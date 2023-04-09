@@ -35,11 +35,22 @@ function handleFormSubmission(event) {
   event.preventDefault();
   const inputtedFirstName = document.querySelector("input#first-name").value;
   const inputtedPizzaSize = document.getElementById("pizza-size-input").value;
-  const inputtedToppings = document.querySelectorAll("input[name=topping-option]:checked").values;
+  const inputtedToppings = document.querySelectorAll("[name=topping-option]:checked");
   const inputtedToppingsArr = Array.from(inputtedToppings);
+
   console.log(inputtedFirstName);
   console.log(inputtedPizzaSize);
-  console.log(inputtedToppingsArr);
+
+  const newToppingsArray =[];
+  inputtedToppingsArr.forEach(function(element) {
+    const paragraph = document.createElement("p");
+    paragraph.append(element.value);
+    newToppingsArray.push(element.value);
+    document.body.append(paragraph);
+  });
+  console.log(array);
+  let newPizza = new Pizza([newToppingsArray], inputtedPizzaSize);
+  console.log(newPizza);
 }
 
 function handleResetButton(event)  {
