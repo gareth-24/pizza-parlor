@@ -30,3 +30,4 @@ Pizza.prototype.checkPrice = function() {
 }
 
 // UI Logic
+
