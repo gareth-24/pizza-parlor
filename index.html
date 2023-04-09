@@ -8,33 +8,47 @@
   <h2>Pizza Parlor</h2>
   <form id = "user-input">
     <div id="order-name">
-      <label for="name1">Add Name: </label>
-      <input id="name1" type="text" name="name1" required>
+      <label for="first-name">Add Name: </label>
+      <input id="first-name" type="text" name="first-name" required>
     </div><br>
     <div id="select-form">
       <p>Select a size:</p>
       <select id="pizza-size-input">
-        <option>Small</option>
-        <option>Medium</option>
-        <option>Large</option>
+        <option>small</option>
+        <option>medium</option>
+        <option>large</option>
       </select><br>
     </div>
     <div id="toppings-input">
       <p>Choose toppings (+$1.25 ea):</p>
-      <label for="pepperoni">pepperoni</label>
-      <input type="checkbox"><br>
-      <label for="sausage">sausage</label>
-      <input type="checkbox"><br>
-      <label for="mushrooms">mushrooms</label>
-      <input type="checkbox"><br>
-      <label for="olives">olives</label>
-      <input type="checkbox"><br>
-      <label for="onions">onions</label>
-      <input type="checkbox"><br>
-      <label for="tomato">tomato</label>
-      <input type="checkbox"><br>
-      <label for="pineapple">pineapple</label>
-      <input type="checkbox">
+      <label>
+        pepperoni
+        <input type="checkbox" name="topping-option" value="pepperoni">
+      </label><br>
+      <label>
+        sausage
+        <input type="checkbox" name="topping-option" value="sausage">
+      </label><br>
+      <label>
+        mushrooms
+        <input type="checkbox" name="topping-option" value="mushrooms">
+      </label><br>
+      <label>
+        olives
+        <input type="checkbox" name="topping-option" value="olives">
+      </label><br>
+      <label>
+        onions
+        <input type="checkbox" name="topping-option" value="onions">
+      </label><br>
+      <label>
+        tomato
+        <input type="checkbox" name="topping-option" value="tomato">
+      </label><br>
+      <label>
+        pineapple
+        <input type="checkbox" name="topping-option" value="pineapple">
+      </label><br>
     </div><br>
     <button type="submit" class="btn">Submit</button>
   </form>
@@ -46,7 +60,7 @@
     </ul>
   </div>
   <form>
-    <button class="restart-btn">Reset Order</button>
+    <button id="reset" class="restart-btn">Reset Order</button>
   </form>
 </body>
 </html>

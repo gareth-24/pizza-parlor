@@ -31,3 +31,23 @@ Pizza.prototype.checkPrice = function() {
 
 // UI Logic
 
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const inputtedFirstName = document.querySelector("input#first-name").value;
+  const inputtedPizzaSize = document.getElementById("pizza-size-input").value;
+  const inputtedToppings = document.querySelectorAll("input[name=topping-option]:checked").values;
+  const inputtedToppingsArr = Array.from(inputtedToppings);
+  console.log(inputtedFirstName);
+  console.log(inputtedPizzaSize);
+  console.log(inputtedToppingsArr);
+}
+
+function handleResetButton(event)  {
+  // event.preventDefault();
+  // window.location.reload();
+}
+
+window.addEventListener("load", function (){
+  document.querySelector("form#user-input").addEventListener("submit", handleFormSubmission);
+  document.getElementById("reset").addEventListener("onclick", handleResetButton);
+});
