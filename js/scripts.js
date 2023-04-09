@@ -48,14 +48,14 @@ function handleFormSubmission(event) {
     newToppingsArray.push(element.value);
     document.body.append(paragraph);
   });
-  console.log(array);
+  console.log(newToppingsArray);
   let newPizza = new Pizza([newToppingsArray], inputtedPizzaSize);
   console.log(newPizza);
 }
 
 function handleResetButton(event)  {
-  // event.preventDefault();
-  // window.location.reload();
+  event.preventDefault();
+  window.location.reload();
 }
 
 window.addEventListener("load", function (){
