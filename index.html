@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
+<body>
+  <h2>Pizza Parlor</h2>
+  <form id = "user-input">
+    <div id="order-name">
+      <label for="name1">Add Name: </label>
+      <input id="name1" type="text" name="name1" required>
+    </div><br>
+    <div id="select-form">
+      <p>Select a size:</p>
+      <select id="pizza-size-input">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select><br>
+    </div>
+    <div id="toppings-input">
+      <p>Choose toppings (+$1.25 ea):</p>
+      <label for="pepperoni">pepperoni</label>
+      <input type="checkbox"><br>
+      <label for="sausage">sausage</label>
+      <input type="checkbox"><br>
+      <label for="mushrooms">mushrooms</label>
+      <input type="checkbox"><br>
+      <label for="olives">olives</label>
+      <input type="checkbox"><br>
+      <label for="onions">onions</label>
+      <input type="checkbox"><br>
+      <label for="tomato">tomato</label>
+      <input type="checkbox"><br>
+      <label for="pineapple">pineapple</label>
+      <input type="checkbox">
+    </div><br>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  
+  <div id="pizza-results" class="hidden">
+    <p>Pizza results: <span id="player-name"></span></p>
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+  <form>
+    <button class="restart-btn">Reset Order</button>
+  </form>
+</body>
+</html>
