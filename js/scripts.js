@@ -5,5 +5,8 @@ function Pizza(topping, size)  {
   this.size = size;
 }
 
+Pizza.prototype.addTopping = function(newTopping) {
+  this.toppings.push(newTopping);
+}
 
 // UI Logic
