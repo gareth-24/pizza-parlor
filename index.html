@@ -7,7 +7,7 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <h2>Pizza Parlor</h2>
+  <h2>Pizza Parlor</h2><br>
   <form id = "user-input">
     <div id="order-name" class="form-floating">
       <input id="first-name" type="text" class="form-control" name="first-name" placeholder="Firstname Lastname" required>
@@ -68,13 +68,13 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form><br>
   <div id="results" class="hidden">
-    <p id="greeting" class="container">
-      Hello <span id="name-output"></span>! Thank you for choosing to dine with us. Below is a summary of your pizza order.
-    </p>
+    <div id="greeting" class="container">
+      <p class="lead">Hello, <span id="name-output"></span>! Thank you for choosing to dine with us. Below is a summary of your pizza order.</p>
+    </div>
     <div id="selection-results" class="container">
-      <p>Toppings added:</p>
+      <p class="lead">Toppings added:</p>
       <ul id="toppings-results"></ul>
-      <p>Price of your current pizza ($): 
+      <p class="lead">Price of your current pizza ($): 
         <em id="price-output"></em>
       </p>
     </div>
