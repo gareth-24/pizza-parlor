@@ -6,7 +6,7 @@ Code: const myPizza = new Pizza (["pepperoni", "olives"], "medium");
 myPizza;
 Expected Output: Pizza { toppings: ["pepperoni", "olives"], size: "medium" }
 
-Test: "It should also give the pizza object a property called 'currentPrice' that is initial set to 0."
+Test: "It should also give the pizza object a property called 'currentPrice' that is initially set to 0."
 Code: const myPizza = new Pizza (["pepperoni", "olives"], "medium");
 myPizza;
 Expected Output: Pizza { toppings: ["pepperoni", "olives"], size: "medium", currentPrice: 0 }

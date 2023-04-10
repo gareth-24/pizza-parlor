@@ -25,7 +25,7 @@ Pizza.prototype.checkPrice = function() {
   }
 }
 
-// UI Logic
+// User Interface Logic
 function displayGreeting(name)  {
   const nameOutput = document.getElementById("name-output");
   nameOutput.innerText = name;
@@ -48,8 +48,8 @@ function handleFormSubmission(event) {
   const inputtedToppings = document.querySelectorAll("[name=topping-option]:checked");
   const selectedToppingsDiv = document.getElementById("toppings-results");
   selectedToppingsDiv.innerText = null;
-  
   const inputtedToppingsArr = Array.from(inputtedToppings);
+
   let newToppingsArray =[];
   inputtedToppingsArr.forEach(function(element) {
     const listElement = document.createElement("li");
@@ -57,9 +57,8 @@ function handleFormSubmission(event) {
     newToppingsArray.push(element.value);
     selectedToppingsDiv.append(listElement);
   });
-  console.log(newToppingsArray);
+
   const newPizza = new Pizza(newToppingsArray, inputtedPizzaSize);
-  console.log(newPizza);
   price = newPizza.checkPrice();
   displayPizzaDetails(newPizza);
   displayGreeting(inputtedName);
