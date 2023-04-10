@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
@@ -8,76 +9,79 @@
 <body>
   <h2>Pizza Parlor</h2>
   <form id = "user-input">
-    <div id="order-name">
+    <div id="order-name" class="form-floating">
+      <input id="first-name" type="text" class="form-control" name="first-name" placeholder="Firstname Lastname" required>
       <label for="first-name">Enter your name: </label>
-      <input id="first-name" type="text" name="first-name" required>
+
     </div><br>
     <div id="select-form">
       <p>Select a size:</p>
-      <select id="pizza-size-input">
+      <select id="pizza-size-input" class="form-select" aria-label="Default select example">
         <option>small</option>
         <option>medium</option>
-        <option>large</option>
+        <option selected>large</option>
       </select><br>
     </div>
-    <div id="toppings-input">
+    <div id="toppings-input" class="form-check">
       <p>Choose toppings (+$1.25 ea):</p>
       <label>
         pepperoni
-        <input type="checkbox" name="topping-option" value="pepperoni">
+        <input type="checkbox" name="topping-option" value="pepperoni" class="form-check-input">
       </label><br>
       <label>
         sausage
-        <input type="checkbox" name="topping-option" value="sausage">
+        <input type="checkbox" name="topping-option" value="sausage" class="form-check-input">
       </label><br>
       <label>
         anchovies
-        <input type="checkbox" name="topping-option" value="anchovies">
+        <input type="checkbox" name="topping-option" value="anchovies" class="form-check-input">
       </label><br>
       <label>
         mushrooms
-        <input type="checkbox" name="topping-option" value="mushrooms">
+        <input type="checkbox" name="topping-option" value="mushrooms" class="form-check-input">
       </label><br>
       <label>
         olives
-        <input type="checkbox" name="topping-option" value="olives">
+        <input type="checkbox" name="topping-option" value="olives" class="form-check-input">
       </label><br>
       <label>
         onions
-        <input type="checkbox" name="topping-option" value="onions">
+        <input type="checkbox" name="topping-option" value="onions" class="form-check-input">
       </label><br>
       <label>
         tomato
-        <input type="checkbox" name="topping-option" value="tomato">
+        <input type="checkbox" name="topping-option" value="tomato" class="form-check-input">
       </label><br>
       <label>
         pineapple
-        <input type="checkbox" name="topping-option" value="pineapple">
+        <input type="checkbox" name="topping-option" value="pineapple" class="form-check-input">
       </label><br>
       <label>
         peppers
-        <input type="checkbox" name="topping-option" value="peppers">
+        <input type="checkbox" name="topping-option" value="peppers" class="form-check-input">
       </label><br>
       <label>
         artichoke
-        <input type="checkbox" name="topping-option" value="artichoke">
+        <input type="checkbox" name="topping-option" value="artichoke" class="form-check-input">
       </label><br>
     </div><br>
-    <button type="submit" class="btn">Submit</button>
-  </form>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form><br>
   <div id="results" class="hidden">
-    <p id="greeting">
+    <p id="greeting" class="container">
       Hello <span id="name-output"></span>! Thank you for choosing to dine with us. Below is a summary of your pizza order.
     </p>
-    <p>Toppings added:</p>
-    <ul id="toppings-results"></ul>
-    <p>Price of your current pizza ($): 
-      <span id="price-output"></span>
-    </p>
-  </div>
+    <div id="selection-results" class="container">
+      <p>Toppings added:</p>
+      <ul id="toppings-results"></ul>
+      <p>Price of your current pizza ($): 
+        <em id="price-output"></em>
+      </p>
+    </div>
+  </div><br>
 
   <form>
-    <button id="reset" class="restart-btn">Reset Order</button>
+    <button id="reset" class="btn btn-warning">Reset Order</button>
   </form>
 </body>
 </html>
