@@ -1,3 +1,31 @@
+# _Pizza Parlor_
+
+#### By _**Gareth Grindeland**_
+
+#### _A student web application built with JavaScript, HTML, and CSS._
+
+## Technologies Used
+
+* Git
+* HTML
+* CSS
+* JavaScript
+* Bootstrap version 5.2.3
+* Dillinger online markdown editor
+
+## Description
+
+_This is a student project built from scratch using JavaScript, HTML, and CSS in order to demonstrate an understanding of constructor functions, prototype methods, and test-driven development. On the webpage the user can enter the name of the person that the order is for, choose a pizza size, and select any number of toppings from the checkbox form. Once the form is submitted, the application will calculate the cost of their custom pizza based off of its size and toppings and display the results. Each time the form is submitted, the results will update. This was submitted as an independent coding project for week 4 of the full-time Epicodus C# and React course._
+
+## Setup/Installation Requirements
+
+* _Clone this repository to your desktop._
+* _Navigate to the top level of the directory._
+* _Open index.html in your browser._
+* _Enter your name and choose a pizza size and toppings from the form._
+* _Click 'Submit' to see the price of your pizza._
+
+## Tests
 ```
 Describe: Pizza()
 
@@ -54,5 +82,13 @@ Expected Output:
 5;
 9;
 13;
-
 ```
+
+## Known Bugs
+
+* _No known bugs_
+
+## License
+
+_MIT_
+_Copyright (c) 2023 Gareth Grindeland_
