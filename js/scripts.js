@@ -6,10 +6,6 @@ function Pizza(topping, size)  {
   this.currentPrice = 0;
 }
 
-Pizza.prototype.addTopping = function(newTopping) {
-  this.toppings.push(newTopping);
-}
-
 Pizza.prototype.checkPrice = function() {
   let numberOfToppings = this.toppings.length;
   this.currentPrice += (numberOfToppings*1.25);
@@ -59,7 +55,7 @@ function handleFormSubmission(event) {
   });
 
   const newPizza = new Pizza(newToppingsArray, inputtedPizzaSize);
-  const price = newPizza.checkPrice();
+  newPizza.checkPrice();
   displayPizzaDetails(newPizza);
   displayGreeting(inputtedName);
 }
