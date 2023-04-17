@@ -59,7 +59,7 @@ function handleFormSubmission(event) {
   });
 
   const newPizza = new Pizza(newToppingsArray, inputtedPizzaSize);
-  price = newPizza.checkPrice();
+  const price = newPizza.checkPrice();
   displayPizzaDetails(newPizza);
   displayGreeting(inputtedName);
 }
